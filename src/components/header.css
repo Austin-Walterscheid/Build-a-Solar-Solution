@@ -1,0 +1,21 @@
+.headerContainer {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    padding: 50px 50px 0px 0px;
+    color: white;
+    position: absolute;
+}
+
+.contactHeader {
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    background-color: black;
+    height: 40vh;
+}
+
+.headerPieces {
+    margin: 10px;
+    font-weight: 600;
+}
