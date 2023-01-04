@@ -4,7 +4,8 @@ import React from 'react'
 
 const HomeScreen = () => {
  return (
- <h1>hello world</h1>)
+ <h1>hello world</h1>
+ )
 }
 
 export default HomeScreen;
