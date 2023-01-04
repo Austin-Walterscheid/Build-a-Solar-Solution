@@ -1,20 +1,21 @@
 import React from 'react'
-import './homescreen.module.css'
+import videobg from '../videos/vid.mp4'
+import styles from "./HomeScreen.module.css"
+
 
 const HomeScreen = () => {
- return (
-    <div> 
-      <header className='header'>
-         <div className='headerContainer'>
-            <div className='headerPieces'>Home</div>
-            <div className='headerPieces'>About</div>
-            <div className='headerPieces'>Finance Options</div>
-            <div className='headerPieces'>Diy Kits</div>
-            <div className='headerPieces'>Build your own kit</div>
+    return (
+
+        <div className={styles.main}>
+            <div className={styles.overlay}></div>
+            <video src={videobg} autoPlay loop muted />
+             <div className={styles.cont}>
+                <h1>Build a Solar Solution</h1>
+                <p>Solar without the salesman!</p>
+                <button>Do it Yourself</button>
+            </div>
          </div>
-      </header>
-    </div>
- )
+    )
 }
 
 export default HomeScreen;
