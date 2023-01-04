@@ -1,5 +1,5 @@
 import './App.css';
-import HomeScreen from './components/HomeScreen';
+import HomeScreen from './screens/HomeScreen';
 
 function App() {
   return (

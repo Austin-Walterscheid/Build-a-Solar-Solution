@@ -4,7 +4,12 @@ import React from 'react'
 
 const HomeScreen = () => {
  return (
- <h1>hello world</h1>)
+    <div className=''>
+
+ <h1>Build a Solar Solution</h1>
+
+    </div>
+ )
 }
 
 export default HomeScreen;
