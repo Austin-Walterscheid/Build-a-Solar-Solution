@@ -11,13 +11,12 @@
     width: 100vw;
     display: flex;
     justify-content: end;
-    background-color: black;
-    height: 10vh;
+    height: 40vh;
 }
 
 .headerPieces {
     margin: 0px;
     font-weight: 600;
-    text-decoration: underline;
-    
 }
+
+@media screen {}

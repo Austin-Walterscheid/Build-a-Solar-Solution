@@ -15,7 +15,7 @@ video {
     object-fit: cover;
 }
 
-.contain {
+.cont {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -26,15 +26,14 @@ video {
     align-items: center;
     color: white;
 }
-/* .overlay {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0, .3);
-    object-fit: cover;
-} */
+}
 button {
     width: 110px;
     height: 35px;
