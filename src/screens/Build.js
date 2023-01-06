@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.css";
 import photo from "../media/contactphoto.jpg";
 import Header from "../components/Header";
-export default function Contact() {
+export default function Build() {
   return (
     <div>
       <Header picture={photo}/>
