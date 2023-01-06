@@ -1,5 +1,5 @@
 import React from "react";
-import videobg from "../videos/vid.mp4";
+import videobg from "../media/vid.mp4";
 import styles from "./HomeScreen.module.css";
 import Header from '../components/Header'
 
