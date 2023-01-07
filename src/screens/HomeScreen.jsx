@@ -7,7 +7,6 @@ const HomeScreen = () => {
   return (
     <div>
       <div className={styles.main}>
-        <div className={styles.overlay}></div>
         <video src={videobg} autoPlay loop muted />
         <div className={styles.cont}>
           <Header/>
