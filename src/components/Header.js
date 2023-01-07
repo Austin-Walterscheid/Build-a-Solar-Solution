@@ -9,7 +9,7 @@ export default function Header(props) {
       <div className="headerContainer">
         <div onClick={() => {navigate('/')}} className="headerPieces">Home</div>
         <div onClick={() => {navigate('/about')}} className="headerPieces">About</div>
-        <div onClick={() => navigate('/DIYKits')} className="headerPieces">Diy Kits</div>
+        <div onClick={() => navigate('/diy')} className="headerPieces">Diy Kits</div>
         <div onClick={() => navigate('/headerPieces')} className="headerPieces">Build your own kit</div>
       </div>
       <img src={props.picture} alt="" />
