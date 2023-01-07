@@ -1,22 +1,35 @@
 import React from "react";
-import "./Contact.css";
-import photo from "../media/contactphoto.jpg";
+import styles from "./About.module.css";
 import Header from "../components/Header";
 export default function About() {
   return (
-    <div>
-      <Header picture={photo}/>
-      <div className="contactContainer">
-        <h2 className="contactText">Get In Touch With Us!</h2>
-        <div className="inputTopContainer">
-          <input className="smallInput" placeholder="First Name" />
-          <input className="smallInput" placeholder="Last Name"/>
-        </div>
-        <div className="inputBottomContainer">
-          <input className="largeInput" placeholder="Email" />
-          <input className="largeInput" />
+    <>
+      <div className={styles.main}>
+        <Header />
+
+        <div className={styles.flex}>
+          <div className={styles.aboutContainer}>
+            <div className={styles.mainText}>Our Mission</div>
+            <div className={styles.aboutText}>
+              Our mission is to not be gay and get rid of the salesman because
+              bottom line you guys pay way too much. We could potentially save
+              everyone 20k
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div className={styles.secondMain}>
+    
+        <div className={styles.leftContainer}>
+          <h2>About us</h2>
+          <div className={styles.aboutParagraph}>We are a company focused on giving back to the coustomer. Both of us once being solar salesman and felt li</div>
+        </div>
+        <div className={styles.rightContainer}>
+          <h2>The Real Cost Of Solar</h2>
+          <div className={styles.aboutParagraph}>Look up what an average solar salesman makes a year(its 100k btw) and tell me whose pocket that money comes out of. The average solar salesman makes 10k a deal! We want to take that huge margin away. We charge 100 dollars per kw   </div>
+        </div>
+      </div>
+      <footer className={styles.footerContainer}></footer>
+    </>
   );
 }
