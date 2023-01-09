@@ -32,7 +32,7 @@ const DiyKitScreen = () => {
                         <img src={truck} alt="" />
                         <div>
                             <div className="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/D3byOL6K3cw" title="YouTube video" allowFullScreen></iframe>
+                                {/* <iframe src="https://www.youtube.com/embed/D3byOL6K3cw" title="YouTube video" allowFullScreen></iframe> */}
                             </div>
                         </div>
                     </div>

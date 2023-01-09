@@ -12,7 +12,7 @@ export default (
 			<Route path="/" element={<HomeScreen/>} />
 			<Route path="/about" element={<About/>} />
 			<Route path="/contact" element={<Contact/>} />
-			<Route path="/diy" element={<DitKitScreen/>} />
+			<Route path="/diy" element={<DIY/>} />
 			<Route path="/build" element={<Build/>} />
 		</Routes>
 	</BrowserRouter>
