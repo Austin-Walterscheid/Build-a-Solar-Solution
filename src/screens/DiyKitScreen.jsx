@@ -8,36 +8,39 @@ import inverter from "../media/inverter.jpg";
 import clipboard from "../media/clipboard.png";
 import truck from "../media/truck.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
+import Header from "../components/Header";
 
 const DiyKitScreen = () => {
     return (
-        <div>
-            <Container>
-
-                <div>
-
+        <div className={styles.main}>
+            {/* <img src={joe} alt=''></img> */}
+            {/* <Container> */}
+            <Header picture={joe} />
+            <div className={styles.topContainer2}>
+                <div className={styles.topContainer}>
                     <h1>Solar Power Cheaper</h1>
-                    <p>Solar can be more expensive than a wall street hooker, therefore to reduce the cost we vut out the salesman and provide you with every component you need to provide your home with solar, every project is custom designed to fit your homes needs.</p>
-                    <img src={joe} alt=''></img>
-                </div>
-                <div>
+                    <p>Solar can be more expensive than a wall street hooker, therefore to reduce the cost we cut out the salesman and provide you with every component you need to provide your home with solar, every project is custom designed to fit your homes needs.</p>
                     <h1>DIY Solar kits</h1>
+                </div>
+            </div>
+            <div className={styles.split}>
+                <div className={styles.iconsCont2}>
                     <div className={styles.icons}>
-                        <img src={solar} alt="" />
-                        <img src={wrench} alt="" />
-                        <img src={plug} alt="" />
-                        <img src={inverter} alt="" />
-                        <img src={clipboard} alt="" />
-                        <img src={truck} alt="" />
-                        <div>
-                            <div className="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/D3byOL6K3cw" title="YouTube video" allowFullScreen></iframe>
-                            </div>
-                        </div>
+                        <img src={solar} alt="" className={styles.icon1} />
+                        <img src={wrench} alt="" className={styles.icon1} />
+                        <img src={plug} alt="" className={styles.icon1} />
+                    </div>
+                    <div className={styles.bottomIcons}>
+                        <img src={inverter} alt="" className={styles.icon1} />
+                        <img src={clipboard} alt="" className={styles.icon1} />
+                        <img src={truck} alt="" className={styles.icon1} />
                     </div>
                 </div>
-            </Container>
+                <div className={styles.video}>
+                    <iframe src="https://www.youtube.com/embed/D3byOL6K3cw" title="YouTube video" allowFullScreen className={styles.video2}></iframe>
+                </div>
+            </div>
+            {/* </Container> */}
         </div>
     )
 }
