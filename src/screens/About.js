@@ -22,12 +22,12 @@ export default function About() {
       <div className={styles.secondMain}>
     
         <div className={styles.leftContainer}>
-          <h2>About us</h2>
-          <div className={styles.aboutParagraph}>We are a company focused on giving back to the coustomer. Both of us once being solar salesman and felt li</div>
+          <h2 className={styles.aboutTitle}>About us</h2>
+          <div className={styles.aboutParagraph}>We are a company focused on giving back to the coustomer. The company takes on average 20k a deal. We want to give that back</div>
         </div>
         <div className={styles.rightContainer}>
-          <h2>The Real Cost Of Solar</h2>
-          <div className={styles.aboutParagraph}>Look up what an average solar salesman makes a year(its 100k btw) and tell me whose pocket that money comes out of. The average solar salesman makes 10k a deal! We want to take that huge margin away. We charge 100 dollars per kw   </div>
+          <h2 className={styles.aboutTitle}>The Real Cost Of Solar</h2>
+          <div className={styles.aboutParagraph}>Look up what an average solar salesman makes a year(its 100k btw) and tell me whose pocket that money comes out of. The average solar salesman makes 10k a deal!   </div>
         </div>
       </div>
       <Footer/>

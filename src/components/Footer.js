@@ -5,6 +5,7 @@ import {Insta} from '../media/Insta'
 import { Facebook } from "../media/Facebook.js";
 import { Linkedin } from "../media/Linkedin.js";
 import { Twitter } from "../media/Twitter.js";
+import photo from '../media/logo.png'
 
 // import Logo from '../media/logo.svg'
 export default function Footer(props) {
@@ -12,6 +13,7 @@ export default function Footer(props) {
 
   return (
     <div className={styles.footer}>
+      <img className={styles.logo} src={photo} alt="" />
       <div className="exploreContainer">
         <div className={styles.footerTitle}>Explore</div>
         <div className={styles.footerTags}>Home</div>

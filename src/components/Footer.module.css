@@ -4,12 +4,16 @@
     height: 30vh;
     background-color: black;
     color: white;
-    padding-top: 30px;
+    align-items: center;
 }
 
 .footerTitle {
-    font-weight: 350;
+    font-weight: 250;
     font-size: 25px;
+}
+
+.logo {
+    height: 150px;
 }
 
 .footerTags {

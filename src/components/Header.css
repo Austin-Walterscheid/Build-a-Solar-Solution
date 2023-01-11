@@ -8,14 +8,14 @@
 }
 
 .contactHeader {
+    background-color: black;
     width: 100vw;
     display: flex;
     justify-content: end;
-    height: 40vh;
+    height: 20vh;
 }
 
 .picture {
-    width: 100%;
     height: 400px;
     object-fit: cover;
     background-color: rgba(0, 0, 0, .3);
