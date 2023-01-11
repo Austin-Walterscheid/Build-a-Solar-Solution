@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.module.css";
+import styles from "./Header.module.css";
 import { useNavigate } from 'react-router-dom';
 export default function Header(props) {
   const navigate = useNavigate()
@@ -10,12 +10,12 @@ export default function Header(props) {
         <div>
           
         </div>
-        <div onClick={() => {navigate('/')}} className="headerPieces">Home</div>
-        <div onClick={() => {navigate('/about')}} className="headerPieces">About</div>
-        <div onClick={() => navigate('/diy')} className="headerPieces">Diy Kits</div>
-        <div onClick={() => navigate('/solarcalculator')} className="headerPieces">Solar Calculator</div>
+        <div onClick={() => {navigate('/')}} className={styles.headerPieces}>Home</div>
+        <div onClick={() => {navigate('/about')}} className={styles.headerPieces}>About</div>
+        <div onClick={() => navigate('/diy')} className={styles.headerPieces}>Diy Kits</div>
+        <div onClick={() => navigate('/solarcalculator')} className={styles.headerPieces}>Solar Calculator</div>
       </div>
-      <img src={props.picture} alt="" />
+      <img className={styles.picture} src={props.picture} alt="" />
     </header>
   );
 }
