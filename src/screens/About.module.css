@@ -13,6 +13,10 @@
     font-weight: 200;
 }
 
+.aboutTitle {
+    font-weight: 350;
+}
+
 .aboutText {
     font-size: 25px;
     color: white;
@@ -30,7 +34,7 @@
 }
 
 .secondMain {
-    height: 30vh;
+    height: 40vh;
     background-color: white;
     display: flex;
     justify-content: space-around;
@@ -58,4 +62,5 @@
 
 .aboutParagraph {
     font-weight: 200;
+    font-size: 25px;
 }
