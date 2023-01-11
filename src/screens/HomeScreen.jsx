@@ -1,6 +1,6 @@
 import React from "react";
 import videobg from "../media/vid.mp4";
-import styles from "./Homescreen.module.css";
+import styles from "./HomeScreen.module.css";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 

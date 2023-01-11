@@ -19,7 +19,7 @@
 .split {
     display: flex;
     flex-direction: row;
-    height: 40vh;
+    height: 60vh;
 }
 
 .icons {
@@ -66,5 +66,18 @@
     display: flex;
     justify-content: center;
     height: 500px;
+    width: 100%;
+}
+.kitTitle {
+    text-decoration: underline;
+    
+}
+.wordsWicon {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+.bottomContainer {
+    /* display: flex; */
     width: 100%;
 }
