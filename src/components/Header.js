@@ -15,7 +15,6 @@ export default function Header(props) {
         <div onClick={() => navigate('/diy')} className="headerPieces">Diy Kits</div>
         <div onClick={() => navigate('/solarcalculator')} className="headerPieces">Solar Calculator</div>
       </div>
-      <img src={props.picture} alt="" />
     </header>
   );
 }

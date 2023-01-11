@@ -18,5 +18,10 @@
     margin: 0px;
     font-weight: 600;
 }
+.pic {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
 
 @media screen {}
