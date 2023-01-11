@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    height: 30vh;
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+}
+
+.footerTitle {
+    font-weight: 350;
+    font-size: 25px;
+}
+
+.footerTags {
+    font-weight: 100;
+}
+
+.socialsText {
+    font-size: 30px;
+    font-weight: 250;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import Header from "../components/Header";
+import Footer from '../components/Footer'
 export default function About() {
   return (
     <>
@@ -29,7 +30,7 @@ export default function About() {
           <div className={styles.aboutParagraph}>Look up what an average solar salesman makes a year(its 100k btw) and tell me whose pocket that money comes out of. The average solar salesman makes 10k a deal! We want to take that huge margin away. We charge 100 dollars per kw   </div>
         </div>
       </div>
-      <footer className={styles.footerContainer}></footer>
+      <Footer/>
     </>
   );
 }
