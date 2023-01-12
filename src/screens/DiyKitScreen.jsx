@@ -18,7 +18,7 @@ const DiyKitScreen = () => {
             <Header picture={joe} />
             <div className={styles.topContainer2}>
                 <div className={styles.topContainer}>
-                    <h1>Solar Power Cheaper</h1>
+                    <h1 className={styles.solarTitle}>Solar Power Cheaper</h1>
                     <p>Solar can be more expensive than a wall street hooker, therefore to reduce the cost we cut out the salesman and provide you with every component you need to provide your home with solar, every project is custom designed to fit your homes needs.</p>
 
                 </div>
