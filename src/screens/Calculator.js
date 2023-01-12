@@ -35,6 +35,7 @@ export default function Calculator() {
                   >
                     Submit
                   </button>
+                  <div></div>
                 </div>
               </div>
             </>
@@ -62,24 +63,49 @@ export default function Calculator() {
                           setThirdSection(true)
                         );
                       }}
+                      Promise
                     >
                       Submit
                     </button>
                   </div>
                 </div>
+                <button
+                  onClick={() => {
+                    Promise.all([setFirstSection(true)]).then(
+                      setSecondSection(false)
+                    );
+                  }}
+                >
+                  back baby
+                </button>
               </div>
             </>
           )}
           {thirdSection && (
             <>
-              <div className={styles.calcQuiz}>
-                <div className={styles.quizTitle}>
-                  
+              <div>
+                <div>
+                  <div>Install Cost</div>
+                  <div>{}</div>
                 </div>
                 <div>
-                  
+                  <div>System Size</div>
+                  <div>{}</div>
+                </div>
+                <div>
+                  <div>25 Year Savings</div>
+                  <div>{}</div>
                 </div>
               </div>
+              <button
+                onClick={() => {
+                  Promise.all([setSecondSection(true)]).then(
+                    setThirdSection(false)
+                  );
+                }}
+              >
+                back baby
+              </button>
             </>
           )}
         </div>
