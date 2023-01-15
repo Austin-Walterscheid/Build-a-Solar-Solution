@@ -12,8 +12,14 @@
     color: white;
 }
 
+.statsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
 .calcQuiz {
-    background-color: yellow;
+    background-color: black;
+    color: white;
     height: 49vh;
     width: 100%;
 }
@@ -27,6 +33,11 @@
 
 .checkRow {
     display: flex;
+    color: white;
+}
+
+input {
+    border-radius: 5px;
 }
 
 .quizTitle {
