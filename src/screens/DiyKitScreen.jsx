@@ -46,12 +46,12 @@ const DiyKitScreen = () => {
                         <div className={styles.wordsWicon}>
                         <img src={inverter} alt="" className={styles.icon1} />
                         <h5>Inverters</h5>
-                        <p>Designed for your specific needs</p>
+                        <p>Designed for your specific</p>
                         </div>
                         <div className={styles.wordsWicon}>
                         <img src={clipboard} alt="" className={styles.icon1} />
-                        <h5>Plan Set & Engineering</h5>
-                        <p>The paperwork you need to go solar</p>
+                        <h5>Plan Set</h5>
+                        <p>The paperwork you need</p>
                         </div>
                         <div className={styles.wordsWicon}>
                         <img src={truck} alt="" className={styles.icon1} />
