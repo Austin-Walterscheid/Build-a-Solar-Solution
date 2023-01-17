@@ -1,15 +1,18 @@
 .main {
-    height: 70vh;
-    background-color: white;
+    height: 50vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 110px;
 }
 
 .mainContainer {
-    width: 50%;
-    background-color: black;
+    width: 80%;
     height: 80%;
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .statsContainer {
@@ -18,10 +21,17 @@
 }
 
 .calcQuiz {
-    background-color: black;
-    color: white;
-    height: 49vh;
-    width: 100%;
+    background-color: rgb(224, 224, 224);
+    height: 50vh;
+    width: 750px;
+}
+
+.questionsParagraph {
+    font-weight: 600;
+}
+
+.questionsTitle {
+    font-weight: 800;
 }
 
 .quizContainer {
@@ -46,10 +56,87 @@ input {
 }
 
 .calcTitle {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 40px;
+    color: white;
+}
+
+.calcTitleContainer {
+    padding: 15px;
+}
+
+.calcParagraphContainer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.calcParagraph {
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    width: 60%;
 }
 
 .paragraph {
     width: 500px;
+}
+
+.solarFAQ {
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.questionsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.questionsLeftContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactHeader {
+    background-color: transparent;
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    overflow: hidden;
+    justify-content: end;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.headerContainer {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    padding: 50px 50px 0px 0px;
+    color: white;
+    position: absolute;
+}
+
+.picture {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(60%);
+}
+
+.headerPieces {
+    margin: 0px;
+    font-weight: 600;
+}
+
+.headerPieces:hover {
+    text-decoration: underline;
+}
+
+.pic {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
 }

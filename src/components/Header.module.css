@@ -1,3 +1,14 @@
+.contactHeader {
+    background-color: transparent;
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    overflow: hidden;
+    justify-content: end;
+    height: 20vh;
+    object-fit: cover;
+}
+
 .headerContainer {
     display: flex;
     width: 40%;
@@ -7,31 +18,24 @@
     position: absolute;
 }
 
-.contactHeader {
-    background-color: transparent;
-    width: 100vw;
-    display: flex;
-    justify-content: end;
-    height: 20vh;
-}
-
 .picture {
     height: 400px;
     object-fit: cover;
     width: 100%;
+    filter: brightness(60%);
 }
 
 .headerPieces {
     margin: 0px;
     font-weight: 600;
 }
+
 .headerPieces:hover {
     text-decoration: underline;
 }
+
 .pic {
     height: 400px;
     object-fit: cover;
     width: 100%;
 }
-
-@media screen {}
