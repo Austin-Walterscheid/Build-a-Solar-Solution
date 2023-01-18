@@ -7,6 +7,11 @@
     background-color: black;
 }
 
+.backgroundPhoto {
+    height: 100%;
+    background-image: url('../media/contactphoto.jpg');
+}
+
 .mainText {
     color: white;
     font-size: 100px;

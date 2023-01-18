@@ -2,7 +2,6 @@
     background-color: transparent;
     width: 100vw;
     display: flex;
-    background-color: black;
     overflow: hidden;
     justify-content: end;
     height: 20vh;
@@ -28,6 +27,7 @@
 .headerPieces {
     margin: 0px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .headerPieces:hover {

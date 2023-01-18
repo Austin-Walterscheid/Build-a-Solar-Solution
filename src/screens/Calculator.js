@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Calculator.module.css";
 import photo from "../media/contactphoto.jpg";
 import Header from "../components/Header";
+import { Faq } from "../components/Faq";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
@@ -28,8 +29,7 @@ export default function Calculator(props) {
   };
   const getCost = () => {
     const cost = systemSize * 1700;
-    const discountedCost = discounted === true ? cost * 0.74 : cost;
-    setCost(discountedCost);
+    setCost(cost);
     let formattedCost = cost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     setInstallCost(formattedCost);
   };
@@ -41,7 +41,7 @@ export default function Calculator(props) {
       if (i % 12 !== 0) {
         counter = counter + average;
       } else {
-        average = average + average * 0.05;
+        average = average + average * 0.04;
         counter = counter + average;
       }
     }
@@ -52,44 +52,8 @@ export default function Calculator(props) {
 
   return (
     <div className={styles.overlay}>
-      <div
-        style={{ backgroundImage: `url(${photo})` }}
-        className={styles.contactHeader}
-      >
-        <div className={styles.headerContainer}>
-          <div></div>
-          <div
-            onClick={() => {
-              navigate("/");
-            }}
-            className={styles.headerPieces}
-          >
-            Home
-          </div>
-          <div
-            onClick={() => {
-              navigate("/about");
-            }}
-            className={styles.headerPieces}
-          >
-            About
-          </div>
-          <div onClick={() => navigate("/diy")} className={styles.headerPieces}>
-            Diy Kits
-          </div>
-          <div
-            onClick={() => navigate("/solarcalculator")}
-            className={styles.headerPieces}
-          >
-            Solar Calculator
-          </div>
-          <div
-            onClick={() => navigate("/login")}
-            className={styles.headerPieces}
-          >
-            Login
-          </div>
-        </div>
+      <div className={styles.backgroundPhoto}>
+        <Header/>
         <div className={styles.main}>
           <div className={styles.calcTitleContainer}>
             <div className={styles.calcTitle}>Solar Panel Cost Calculator</div>
@@ -107,33 +71,37 @@ export default function Calculator(props) {
               <>
                 <div className={styles.calcQuiz}>
                   <div className={styles.quizTitle}>
-                    How much do you pay a month?
+                    How much do you pay a month on average for electricity?
                   </div>
                   <div>
-                    <input
-                      type="text"
-                      placeholder="Monthly Average"
-                      onChange={(event) => {
-                        setMonthlyAverage(event.target.value);
-                      }}
-                    />
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Monthly Average"
+                        onChange={(event) => {
+                          setMonthlyAverage(event.target.value);
+                        }}
+                      />
 
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="kwh price"
-                      onChange={(event) => {
-                        setkwPrice(event.target.value);
-                      }}
-                    />
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="kwh price"
+                        onChange={(event) => {
+                          setkwPrice(event.target.value);
+                        }}
+                      />
+                    </div>
 
                     <button
                       onClick={() => {
                         Promise.all([
                           setFirstSection(false),
                           getSystemNeeded(),
-                        ]).then(setSecondSection(true));
+                          getCost(),
+                          findSavings(),
+                        ]).then(setThirdSection(true));
                       }}
                     >
                       Submit
@@ -142,80 +110,35 @@ export default function Calculator(props) {
                 </div>
               </>
             )}
-            {secondSection && (
-              <>
-                <div className={styles.calcQuiz}>
-                  <div className={styles.quizTitle}>
-                    Do you plan on Claiming the tax credit?(you must owe federal
-                    income tax)
-                  </div>
-                  <div>
-                    <div className={styles.quizContainer}>
-                      <div className={styles.checkRow}>
-                        <input
-                          onClick={() => {
-                            debugger;
-                            setDiscounted(true);
-                          }}
-                          type="checkbox"
-                        />
-                        <div>I do want my system 26% discounted</div>
-                      </div>
-                      <div className={styles.checkRow}>
-                        <input type="checkbox" />
-                        <div>I dont want my system 26% discounted</div>
-                      </div>
-
-                      <button
-                        onClick={() => {
-                          Promise.all([
-                            setSecondSection(false),
-                            getCost(),
-                          ]).then([setThirdSection(true), findSavings()]);
-                        }}
-                        Promise
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => {
-                      Promise.all([setFirstSection(true)]).then(
-                        setSecondSection(false)
-                      );
-                    }}
-                  >
-                    back baby
-                  </button>
-                </div>
-              </>
-            )}
             {thirdSection && (
               <>
                 <div className={styles.statsContainer}>
-                  <div>
-                    <div>Install Cost</div>
-                    <div>{installCost}</div>
+                  <div className={styles.statNumberContainer}>
+                    <div>
+                      <div className={styles.costTitle}>Install Cost</div>
+                      <div>{installCost}</div>
+                    </div>
+                    <div>
+                      <div className={styles.costTitle}>System Size</div>
+                      <div>{systemSize}</div>
+                    </div>
+                    <div>
+                      <div className={styles.costTitle}>25 Year Savings</div>
+                      <div>{savings}</div>
+                    </div>
                   </div>
                   <div>
-                    <div>System Size</div>
-                    <div>{systemSize}</div>
-                  </div>
-                  <div>
-                    <div>25 Year Savings</div>
-                    <div>{savings}</div>
+                    <button
+                      onClick={() => {
+                        Promise.all([setFirstSection(true)]).then(
+                          setThirdSection(false)
+                        );
+                      }}
+                    >
+                      back baby
+                    </button>
                   </div>
                 </div>
-                <button
-                  onClick={() => {
-                    Promise.all([setSecondSection(true)]).then(
-                      setThirdSection(false)
-                    );
-                  }}
-                >
-                  back baby
-                </button>
               </>
             )}
           </div>
@@ -225,30 +148,52 @@ export default function Calculator(props) {
       <div className={styles.solarFAQ}>
         <div>
           <div className={styles.questionsTitle}>
-            Frequently Asked Questions
+            Frequently Asked Questions on DIY solar
           </div>
         </div>
-        <div>
-          <div className={styles.questionsContainer}>
-            <div className={styles.questionsLeftContainer}>
-              <div className={styles.questionsParagraph}>
-                How much do solar panels cost?
-              </div>
-
-              <div className={styles.questionsParagraph}>
-                How much does it cost to install solar panels?
-              </div>
+        <div className={styles.actualFaq}>
+          <div className={styles.faqLeft}>
+            <div className={styles.question}>
+              <Faq
+                answer={
+                  "Solar energy cost has plummeted in the past decade. The average cost of solar panels is less than half what it was ten years ago."
+                }
+                question={"How much do solar panels cost?"}
+              />
             </div>
-            <div className={styles.questionsRightContainer}>
-              <div className={styles.questionsParagraph}>
-                What size solar system do I need?
-              </div>
-              <div className={styles.questionsParagraph}>
-                Is solar energy a sound investment?
-              </div>
-              <div className={styles.questionsParagraph}>
-                How Does the Federal Tax Credit Work?{" "}
-              </div>
+            <div className={styles.question}>
+              <Faq
+                answer={
+                  "That’s why you’re here! Our solar power calculator takes the information you provide about your energy usage patterns and returns our best guess about how much solar energy you might need to generate."
+                }
+                question={"What size solar system do I need?"}
+              />
+            </div>
+            <div className={styles.question}>
+              <Faq
+                answer={
+                  "When you install a solar power system, the federal government rewards you with a tax credit for investing in solar energy."
+                }
+                question={"How Does the Federal Tax Credit Work?"}
+              />
+            </div>
+          </div>
+          <div className={styles.faqRight}>
+            <div className={styles.question}>
+              <Faq
+                answer={
+                  "Solar panel installation cost varies by provider. A turnkey solution will charge 100-200% the cost of equipment to perform the installation."
+                }
+                question={"How much does it cost to install solar panels?"}
+              />
+            </div>
+            <div className={styles.question}>
+              <Faq
+                answer={
+                  "It usually is. Between the tax incentives, like the federal solar tax credit and the reduction of your energy bill, you tend to earn more money over the life of the system than you spent on it up front."
+                }
+                question={"Is solar energy a sound investment?"}
+              />
             </div>
           </div>
         </div>

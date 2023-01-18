@@ -6,7 +6,7 @@ export default function Header(props) {
   
     
   return (
-    <header style={props.background} className={styles.contactHeader}>
+    <header className={styles.contactHeader}>
       <div className={styles.headerContainer}>
         <div>
           
@@ -17,7 +17,6 @@ export default function Header(props) {
         <div onClick={() => navigate('/solarcalculator')} className={styles.headerPieces}>Solar Calculator</div>
         <div onClick={() => navigate('/login')} className={styles.headerPieces}>Login</div>
       </div>
-      <img src="" alt="" />
     </header>
   );
 }
