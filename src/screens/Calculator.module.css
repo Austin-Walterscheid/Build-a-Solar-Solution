@@ -3,8 +3,8 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding-top: 110px;
 }
 
 .mainContainer {
@@ -15,15 +15,52 @@
     justify-content: center;
 }
 
+.backgroundPhoto {
+    height: 100vh;
+    background-image: url('../media/contactphoto.jpg');
+}
+
+.actualFaq {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
 .statsContainer {
     display: flex;
     justify-content: space-around;
+    display: flex;
+    background-color: #cccccc;
+    padding: 20px 100px 100px 100px;
+}
+
+.costTitle {
+    margin: 10px 10px 0px 0px;
+}
+
+.statNumberContainer {
+    display: flex;
 }
 
 .calcQuiz {
     background-color: rgb(224, 224, 224);
-    height: 50vh;
+    height: 35vh;
     width: 750px;
+}
+
+input {
+    height: 40px;
+    margin: 2px;
+    border: 1px solid #331230;
+}
+
+button {
+    background-color: #7b38d8;
+    width: 130px;
+    height: 40px;
+    border: 4px double #cccccc;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .questionsParagraph {
@@ -31,7 +68,8 @@
 }
 
 .questionsTitle {
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 .quizContainer {
@@ -52,7 +90,9 @@ input {
 
 .quizTitle {
     font-size: 25px;
+    font-weight: 800;
     color: black;
+    margin: 25px;
 }
 
 .calcTitle {
@@ -83,10 +123,14 @@ input {
 }
 
 .solarFAQ {
-    height: 40vh;
+    padding: 10px;
     width: 100vw;
     display: flex;
     flex-direction: column;
+}
+
+.question {
+    padding: 15px;
 }
 
 .questionsContainer {

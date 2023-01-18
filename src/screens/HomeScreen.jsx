@@ -42,6 +42,12 @@ const HomeScreen = () => {
               >
                 Solar Calculator
               </div>
+              <div
+                onClick={() => navigate("/login")}
+                className={styles.headerPieces}
+              >
+                Login
+              </div>
             </div>
           </header>
           <h1>Build a Solar Solution</h1>
