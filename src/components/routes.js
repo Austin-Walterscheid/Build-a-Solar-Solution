@@ -5,7 +5,6 @@ import Contact from '../screens/Contact';
 import About from '../screens/About'
 import DIY from '../screens/DiyKitScreen'
 import Calculator from '../screens/Calculator';
-import SignUp from '../screens/SignUpScreen';
 import Login from '../screens/LoginScreen';
 
 export default (
@@ -17,7 +16,6 @@ export default (
 			<Route path="/diy" element={<DIY/>} />
 			<Route path="/solarcalculator" element={<Calculator/>} />
 			<Route path='/login' element={<Login />} />
-			<Route path='/signup' element={<SignUp />} />
 		</Routes>
 	</BrowserRouter>
 );
