@@ -7,6 +7,7 @@ import DIY from '../screens/DiyKitScreen'
 import Calculator from '../screens/Calculator';
 import SignUp from '../screens/SignUpScreen';
 import Login from '../screens/LoginScreen';
+import {Kit} from '../components/Kit';
 
 export default (
 	<BrowserRouter>
@@ -18,6 +19,7 @@ export default (
 			<Route path="/solarcalculator" element={<Calculator/>} />
 			<Route path='/login' element={<Login />} />
 			<Route path='/signup' element={<SignUp />} />
+			<Route path='/kit/:id' element={<Kit />} />
 		</Routes>
 	</BrowserRouter>
 );

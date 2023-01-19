@@ -35,10 +35,8 @@ video {
 }
 
 button {
-    width: 120px;
     height: 35px;
     color: white;
-    background-color: rgb(86, 85, 87);
     margin: 20px;
     border-radius: 8px;
 }

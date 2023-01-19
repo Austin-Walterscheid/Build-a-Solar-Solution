@@ -1,6 +1,7 @@
 .main {
     color: white;
     position: absolute;
+    background-color: black;
 }
 
 .topContainer {
@@ -20,29 +21,21 @@
 .split {
     display: flex;
     flex-direction: row;
-    height: 60vh;
+    justify-content: center;
+    height: 100%;
 }
 
 .icons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     width: 50%;
     align-items: center;
 }
 
-.video {
-    display: flex;
-    width: 50%;
-    background-color: white;
-    justify-content: center;
-    height: 60vh;
-    align-items: center;
-}
-
 .icon1 {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
 }
 
 .bottomIcons {
@@ -53,14 +46,22 @@
     align-items: center;
 }
 
+.title {
+    font-weight: 400;
+    font-size: x-large;
+}
+
+.paragraph {
+    font-size: 20px;
+}
+
 .iconsCont2 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 75%;
     justify-content: center;
     align-items: center;
     background-color: white;
-    height: 60vh;
 }
 
 .video2 {
@@ -72,7 +73,7 @@
 
 .backgroundPhoto {
     height: 100%;
-    background-image: url('../media/joe.png');
+    background-image: url("../media/joe.png");
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,10 +81,22 @@
 
 .wordsWicon {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    color: black;
-    margin: 10px 50px
+    justify-content: space-around;
+    background-color: black;
+    height: 40vh;
+    width: 100%;
+}
+
+.somethingContainer {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.other {
+    display: flex;
+    justify-content: space-around;
 }
 
 .bottomContainer {

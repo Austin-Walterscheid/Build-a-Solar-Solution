@@ -52,7 +52,7 @@ const HomeScreen = () => {
           </header>
           <h1>Build a Solar Solution</h1>
           <p>Solar without the salesman!</p>
-          <button>Do it Yourself</button>
+          <button onClick={() => {navigate('/diy')}}>Do it Yourself</button>
         </div>
       </div>
     </div>

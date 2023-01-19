@@ -55,12 +55,10 @@ input {
 }
 
 button {
-    background-color: #7b38d8;
-    width: 130px;
-    height: 40px;
-    border: 4px double #cccccc;
+    color: black;
+    border: none;
     cursor: pointer;
-    margin: 5px;
+    box-sizing: content-box;
 }
 
 .questionsParagraph {
