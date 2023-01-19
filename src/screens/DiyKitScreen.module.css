@@ -75,7 +75,12 @@
     background-image: url('../media/joe.png');
     object-fit: cover;
     background-repeat: no-repeat;
+<<<<<<< HEAD
     background-size: cover;
+=======
+    background-size: 100%;
+    background-position: center;
+>>>>>>> af599d8e759f284427bd8d16aeacc7358216f6b2
 }
 
 .wordsWicon {
