@@ -23,7 +23,6 @@ export default function Calculator(props) {
     let number = (monthlyAverage / kwPrice) * 12;
     let largeRounded = number / 1000;
     let rounded = largeRounded.toFixed(1);
-    const [panelType] = useState([Silfab, Hanwah, otherShit])
     setSystemSize(rounded);
 
     console.log(systemSize);

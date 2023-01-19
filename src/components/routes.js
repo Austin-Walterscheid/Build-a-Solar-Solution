@@ -17,7 +17,7 @@ export default (
 			<Route path="/diy" element={<DIY/>} />
 			<Route path="/solarcalculator" element={<Calculator/>} />
 			<Route path='/login' element={<Login />} />
-			<Route path='/signup' element={<SignUp />} />
+			<Route path='/kit/:id' element={<Kit />} />
 		</Routes>
 	</BrowserRouter>
 );
