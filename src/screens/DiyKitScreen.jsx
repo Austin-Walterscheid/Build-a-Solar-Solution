@@ -11,8 +11,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import kitSolar from "../media/kitSolar.png";
+import { useNavigate } from "react-router-dom";
 
 const DiyKitScreen = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className={styles.main}>
@@ -85,25 +87,46 @@ const DiyKitScreen = () => {
         <div className={styles.kitsContainer}>
           KITS
           <div className={styles.kitPackages}>
-            <div className={styles.pack}>
+            <div
+              onClick={() => {
+                navigate("/kit/4kw");
+              }}
+              className={styles.pack}
+            >
               <img src={kitSolar} className={styles.solarIcon} />
               <p>10 panels</p>
               <p>4 Kw System</p>
               <button>View</button>
             </div>
-            <div className={styles.pack}>
+            <div
+              onClick={() => {
+                navigate("/kit/8kw");
+              }}
+              className={styles.pack}
+            >
               <img src={kitSolar} className={styles.solarIcon} />
               <p>20 panels</p>
               <p>8 KW System</p>
               <button>View</button>
             </div>
-            <div className={styles.pack}>
+            <div
+              onClick={() => {
+                navigate("/kit/12w");
+              }}
+              className={styles.pack}
+            >
               <img src={kitSolar} className={styles.solarIcon} />
               <p>30 panels</p>
               <p>12 KW System</p>
               <button>View</button>
             </div>
-            <div className={styles.pack}>
+            <div
+              onClick={() => {
+                navigate("/kit/16kw");
+              }}
+             
+              className={styles.pack}
+            >
               <img src={kitSolar} className={styles.solarIcon} />
               <p>40 panels</p>
               <p>16 KW System</p>
