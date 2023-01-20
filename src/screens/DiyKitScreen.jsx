@@ -89,7 +89,7 @@ const DiyKitScreen = () => {
           <div className={styles.kitPackages}>
             <div
               onClick={() => {
-                navigate("/kit/4kw");
+                navigate("/kit/4");
               }}
               className={styles.pack}
             >
@@ -100,7 +100,7 @@ const DiyKitScreen = () => {
             </div>
             <div
               onClick={() => {
-                navigate("/kit/8kw");
+                navigate("/kit/8");
               }}
               className={styles.pack}
             >
@@ -111,7 +111,7 @@ const DiyKitScreen = () => {
             </div>
             <div
               onClick={() => {
-                navigate("/kit/12w");
+                navigate("/kit/12");
               }}
               className={styles.pack}
             >
@@ -122,7 +122,7 @@ const DiyKitScreen = () => {
             </div>
             <div
               onClick={() => {
-                navigate("/kit/16kw");
+                navigate("/kit/16");
               }}
              
               className={styles.pack}
