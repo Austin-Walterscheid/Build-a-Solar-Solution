@@ -13,12 +13,38 @@ let newPackage = (req, res) => {
             });
         });
 };
+let newUser = (req, res) => {
+    const dbInstance = req.app.get('db');
+    console.log(req)
+    dbInstance
+        .newUser([req.params.email])
+        .then((email) => {
+            res.status(200).send(email);
+        })
+        .catch((err) => {
+            res.status(500).send({
+                errorMessage: err
+            });
+        });
+};
 let getPackage = (req, res) => {
     const dbInstance = req.app.get('db');
     console.log(dbInstance)
     dbInstance
         .getPackage([])
         .then((package) => res.status(200).send(package))
+        .catch((err) => {
+            res.status(500).send({
+                errorMessage: err
+            });
+        });
+    }
+let getUser = (req, res) => {
+    const dbInstance = req.app.get('db');
+    console.log(dbInstance)
+    dbInstance
+        .getUser([req.params.email])
+        .then((email) => res.status(200).send(email))
         .catch((err) => {
             res.status(500).send({
                 errorMessage: err
@@ -44,6 +70,8 @@ let deletePackage = (req, res) => {
 module.exports = {
     deletePackage,
     newPackage,
-    getPackage
+    getPackage,
+    getUser,
+    newUser
 
 }

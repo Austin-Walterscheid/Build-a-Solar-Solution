@@ -5,7 +5,7 @@ const dotenv = require('dotenv')
 require('dotenv').config()
 const bodyParser = require('body-parser')
 const { CONNECTION_STRING } = process.env;
-const {newPackage, getPackage} = require('./controller');
+const {newPackage, getPackage, getUser, newUser} = require('./controller');
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -22,7 +22,8 @@ massive({
 
 
 app.post('/api/newPackage', newPackage)
-app.get('/api/getPackage', getPackage)
+app.get('/api/getUser/:email', getUser)
+app.post('/api/newUser/:email', newUser)
 
 
 app.listen(4020, () => console.log('Server running on 4020'))
