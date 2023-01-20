@@ -33,6 +33,9 @@ export function Kit() {
   const getPanels = () => {
     return (id * 100) / 400
   }
+  const getKw = () => {
+    return 
+  }
   return (
     <div className={styles.main}>
       <Header />
@@ -56,7 +59,7 @@ export function Kit() {
               </div>
               <div className={styles.other}>
                 <div className={styles.paragraph}>Amount of panels</div>
-                <input style={{ width: "30px" }} type="text" placeholder={id} />
+                <input onChange={(event) => {handleSubmit = event.target.value}} style={{ width: "30px" }} type="text" placeholder={id} />
               </div>
               <div className={styles.other}>
                 <div className={styles.paragraph}>Panel color</div>

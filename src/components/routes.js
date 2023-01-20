@@ -17,11 +17,11 @@ export default (
 			<Route path="/diy" element={<DIY/>} />
 			<Route path="/solarcalculator" element={<Calculator/>} />
 			<Route path='/login' element={<Login />} />
-<<<<<<< HEAD
+
 			<Route path='/kit/:id' element={<Kit/>} />
-=======
+
 			<Route path='/kit/:id' element={<Kit />} />
->>>>>>> 878f97f0e1892629fe06e51dadd0d714f450a50d
+
 		</Routes>
 	</BrowserRouter>
 );
