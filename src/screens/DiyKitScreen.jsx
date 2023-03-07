@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import kitSolar from "../media/kitSolar.png";
+import { Arrow } from "../media/Arrow";
 import { useNavigate } from "react-router-dom";
 
 const DiyKitScreen = () => {
@@ -19,20 +20,31 @@ const DiyKitScreen = () => {
     <>
       <div className={styles.main}>
         <div className={styles.backgroundPhoto}>
-          <Header picture={joe} />
-          <div className={styles.topContainer2}>
-            <div className={styles.topContainer}>
-              <h1 className={styles.solarTitle}>Solar Power Cheaper</h1>
-              <h6>
-                Solar can be more expensive than a wall street hooker, therefore
-                to reduce the cost we cut out the salesman and provide you with
-                every component you need to provide your home with solar, every
-                project is custom designed to fit your homes needs.
-              </h6>
+          <div className={styles.overlay}>
+            <Header />
+            <div className={styles.topContainer2}>
+              <div className={styles.topContainer}>
+                <h1 className={styles.solarTitle}>Choose a kit below!</h1>
+                <div className={styles.paragraph}>
+                  Solar can be more expensive than a wall street hooker,
+                  therefore to reduce the cost we cut out the salesman and
+                  provide you with every component you need to provide your home
+                  with solar, every project is custom designed to fit your homes
+                  needs.
+                </div>
+              </div>
+            </div>
+            <div className={styles.arrowContainer}>
+              <Arrow />
             </div>
           </div>
         </div>
+
         <div className={styles.split}>
+          <div className={styles.iconTitle}>
+            DIY kits with everything included!
+          </div>
+
           <div className={styles.iconsCont2}>
             <div className={styles.icons}>
               <div className={styles.wordsWicon}>
@@ -69,6 +81,7 @@ const DiyKitScreen = () => {
               </div>
             </div>
           </div>
+
           <div className={styles.video}>
             <iframe
               src="https://www.youtube.com/embed/D3byOL6K3cw"
@@ -96,7 +109,8 @@ const DiyKitScreen = () => {
               <img src={kitSolar} className={styles.solarIcon} />
               <p>10 panels</p>
               <p>4 Kw System</p>
-              <button>View</button>
+
+              <button className={styles.button}>View</button>
             </div>
             <div
               onClick={() => {
@@ -107,7 +121,7 @@ const DiyKitScreen = () => {
               <img src={kitSolar} className={styles.solarIcon} />
               <p>20 panels</p>
               <p>8 KW System</p>
-              <button>View</button>
+              <button className={styles.button}>View</button>
             </div>
             <div
               onClick={() => {
@@ -118,19 +132,18 @@ const DiyKitScreen = () => {
               <img src={kitSolar} className={styles.solarIcon} />
               <p>30 panels</p>
               <p>12 KW System</p>
-              <button>View</button>
+              <button className={styles.button}>View</button>
             </div>
             <div
               onClick={() => {
                 navigate("/kit/16");
               }}
-             
               className={styles.pack}
             >
               <img src={kitSolar} className={styles.solarIcon} />
               <p>40 panels</p>
               <p>16 KW System</p>
-              <button>View</button>
+              <button className={styles.button}>View</button>
             </div>
           </div>
         </div>

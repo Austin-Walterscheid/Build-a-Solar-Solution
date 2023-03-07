@@ -1,25 +1,28 @@
 .main {
     color: white;
     position: absolute;
+    height: 100%;
 }
 
 .topContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 65%;
     height: 20vh;
+    align-items: center;
 }
 
 .topContainer2 {
     display: flex;
     justify-content: center;
     width: 100%;
+    align-items: center;
+    height: 40vh;
 }
 
 .split {
     display: flex;
-    flex-direction: row;
     height: 60vh;
 }
 
@@ -33,11 +36,18 @@
 
 .video {
     display: flex;
-    width: 50%;
+    width: 100%;
     background-color: white;
     justify-content: center;
-    height: 60vh;
+    height: 100%;
     align-items: center;
+}
+
+.video2 {
+    display: flex;
+    justify-content: center;
+    height: 85%;
+    width: 95%;
 }
 
 .icon1 {
@@ -63,11 +73,13 @@
     height: 60vh;
 }
 
-.video2 {
-    display: flex;
-    justify-content: center;
-    height: 500px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .backgroundPhoto {
@@ -101,14 +113,34 @@
     object-fit: cover;
 }
 
+.iconTitle {
+    color: rgb(51, 51, 51);
+    font-size: 35px;
+    padding: 20px;
+    font-weight: 700;
+}
+
 .bottomWords {
     display: flex;
     justify-content: center;
-    font-size: xx-large;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.button {
+    background-color: transparent;
+    border: 1px black solid;
+    border-radius: 15px;
 }
 
 .solarTitle {
-    text-decoration: underline;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.paragraph {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 p {

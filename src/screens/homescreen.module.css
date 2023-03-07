@@ -55,6 +55,14 @@ video {
     font-size: 70px;
 }
 
+.videoContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .loginContainer {
     display: flex;
     height: 50%;
