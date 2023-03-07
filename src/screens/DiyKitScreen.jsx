@@ -44,51 +44,51 @@ const DiyKitScreen = () => {
           <div className={styles.iconTitle}>
             DIY kits with everything included!
           </div>
-
-          <div className={styles.iconsCont2}>
-            <div className={styles.icons}>
-              <div className={styles.wordsWicon}>
-                <img src={solar} alt="" className={styles.icon1} />
-                <h5>Solar Panels</h5>
-                <p>Monocrystalline, black on black solar panels</p>
+          <div className={styles.row}>
+            <div className={styles.iconsCont2}>
+              <div className={styles.icons}>
+                <div className={styles.wordsWicon}>
+                  <img src={solar} alt="" className={styles.icon1} />
+                  <h5>Solar Panels</h5>
+                  <p>Monocrystalline, black on black solar panels</p>
+                </div>
+                <div className={styles.wordsWicon}>
+                  <img src={wrench} alt="" className={styles.icon1} />
+                  <h5>Hardware</h5>
+                  <p>Complete racking system with all the hardware</p>
+                </div>
+                <div className={styles.wordsWicon}>
+                  <img src={plug} alt="" className={styles.icon1} />
+                  <h5>Electrical</h5>
+                  <p>Wiring, switches, and all other necessary components</p>
+                </div>
               </div>
-              <div className={styles.wordsWicon}>
-                <img src={wrench} alt="" className={styles.icon1} />
-                <h5>Hardware</h5>
-                <p>Complete racking system with all the hardware</p>
-              </div>
-              <div className={styles.wordsWicon}>
-                <img src={plug} alt="" className={styles.icon1} />
-                <h5>Electrical</h5>
-                <p>Wiring, switches, and all other necessary components</p>
+              <div className={styles.bottomIcons}>
+                <div className={styles.wordsWicon}>
+                  <img src={inverter} alt="" className={styles.icon1} />
+                  <h5>Inverters</h5>
+                  <p>Designed for your specific needs</p>
+                </div>
+                <div className={styles.wordsWicon}>
+                  <img src={clipboard} alt="" className={styles.icon1} />
+                  <h5>Plan Set</h5>
+                  <p>The paperwork and plans you need</p>
+                </div>
+                <div className={styles.wordsWicon}>
+                  <img src={truck} alt="" className={styles.icon1} />
+                  <h5>Free Shipping</h5>
+                  <p>Included with all DIY kits</p>
+                </div>
               </div>
             </div>
-            <div className={styles.bottomIcons}>
-              <div className={styles.wordsWicon}>
-                <img src={inverter} alt="" className={styles.icon1} />
-                <h5>Inverters</h5>
-                <p>Designed for your specific needs</p>
-              </div>
-              <div className={styles.wordsWicon}>
-                <img src={clipboard} alt="" className={styles.icon1} />
-                <h5>Plan Set</h5>
-                <p>The paperwork and plans you need</p>
-              </div>
-              <div className={styles.wordsWicon}>
-                <img src={truck} alt="" className={styles.icon1} />
-                <h5>Free Shipping</h5>
-                <p>Included with all DIY kits</p>
-              </div>
+            <div className={styles.video}>
+              <iframe
+                src="https://www.youtube.com/embed/D3byOL6K3cw"
+                title="YouTube video"
+                allowFullScreen
+                className={styles.video2}
+              ></iframe>
             </div>
-          </div>
-
-          <div className={styles.video}>
-            <iframe
-              src="https://www.youtube.com/embed/D3byOL6K3cw"
-              title="YouTube video"
-              allowFullScreen
-              className={styles.video2}
-            ></iframe>
           </div>
         </div>
         <div className={styles.bottomContainer}>

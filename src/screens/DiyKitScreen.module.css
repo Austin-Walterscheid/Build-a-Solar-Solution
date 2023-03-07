@@ -23,7 +23,19 @@
 
 .split {
     display: flex;
-    height: 60vh;
+    flex-direction: column;
+    height: 80%;
+}
+
+.arrowContainer {
+    display: flex;
+    align-items: end;
+    height: 40%;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
 }
 
 .icons {
@@ -84,7 +96,7 @@
 
 .backgroundPhoto {
     height: 100%;
-    background-image: url('../media/joe.png');
+    background-image: url("../media/joe.png");
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,7 +109,7 @@
     flex-direction: column;
     align-items: center;
     color: black;
-    margin: 10px 50px
+    margin: 10px 50px;
 }
 
 .bottomContainer {
