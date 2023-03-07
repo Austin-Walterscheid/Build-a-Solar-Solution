@@ -27,6 +27,7 @@ const HomeScreen = () => {
   return (
     <div>
       <div className={styles.main}>
+        <div className={styles.overlay}></div>
         <video src={videobg} autoPlay loop muted />
         <div className={styles.cont}>
           <header className="contactHeader">
@@ -68,9 +69,18 @@ const HomeScreen = () => {
               </div>
             </div>
           </header>
-          <h1>Build a Solar Solution</h1>
-          <p>Solar without the salesman!</p>
-          <button onClick={() => {navigate('/diy')}}>Do it Yourself</button>
+          <div className={styles.loginContainer}>
+            <div className={styles.title}>Lets make this easy</div>
+            <div className={styles.p}>Solar without the salesman!</div>
+            <button
+              className={styles.button}
+              onClick={() => {
+                navigate("/diy");
+              }}
+            >
+              Do it Yourself
+            </button>
+          </div>
         </div>
       </div>
     </div>
