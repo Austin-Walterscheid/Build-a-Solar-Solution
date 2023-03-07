@@ -13,7 +13,7 @@ export default function About() {
             <div className={styles.aboutContainer}>
               <div className={styles.mainText}>Our Mission</div>
               <div className={styles.aboutText}>
-                Our mission is to not be gay and get rid of the salesman because
+                Our mission is to be awesome and get rid of the salesman because
                 bottom line you guys pay way too much. We could potentially save
                 everyone 20k
               </div>

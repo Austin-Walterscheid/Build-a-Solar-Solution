@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import videobg from "../media/vid.mp4";
 import styles from "./HomeScreen.module.css";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { auth } from '../firebase'
+import { getUser } from "../server/util/controller";
+
+
 
 const HomeScreen = () => {
   const navigate = useNavigate();
+    const [ user, setUser] = useState('')
+  useEffect(() => {
+      console.log(auth)
+      axios({
+          method: 'get',
+          url: `http://localhost:3000/getUser/${auth.currentUser?.email}`
+        }).then((res) => {
+            setUser(res.data)
+          })
+},[])
+
+
+
   return (
     <div>
       <div className={styles.main}>

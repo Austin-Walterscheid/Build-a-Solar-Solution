@@ -13,7 +13,7 @@ const LoginScreen = () => {
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
 
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState('')
 
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser)
@@ -55,7 +55,7 @@ const LoginScreen = () => {
                     <h1> Login </h1>
                     <input placeholder='Email...' onChange={(event) => { setLoginEmail(event.target.value) }} />
                     <input placeholder='Password...' onChange={(event) => { setLoginPassword(event.target.value) }} />
-                    <button onClick={login}>Login</button>
+                    <button onClick={() => {login(); navigate("/")}} route>Login</button>
                 </div>
                 <h4>User Logged In: </h4>
                 {user?.email}
