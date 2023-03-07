@@ -24,14 +24,15 @@ export default function Calculator(props) {
     let largeRounded = number / 1000;
     let rounded = largeRounded.toFixed(1);
     setSystemSize(rounded);
-
-    console.log(systemSize);
   };
   const getCost = () => {
     const cost = systemSize * 1700;
     setCost(cost);
+
     let formattedCost = cost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    
     setInstallCost(formattedCost);
+    
   };
 
   const findSavings = () => {
@@ -41,7 +42,7 @@ export default function Calculator(props) {
       if (i % 12 !== 0) {
         counter = counter + average;
       } else {
-        average = average + average * 0.04;
+        average = average + average * 0.004;
         counter = counter + average;
       }
     }
@@ -53,7 +54,7 @@ export default function Calculator(props) {
   return (
     <div className={styles.overlay}>
       <div className={styles.backgroundPhoto}>
-        <Header/>
+        <Header />
         <div className={styles.main}>
           <div className={styles.calcTitleContainer}>
             <div className={styles.calcTitle}>Solar Panel Cost Calculator</div>
@@ -74,16 +75,21 @@ export default function Calculator(props) {
                     How much do you pay a month on average for electricity?
                   </div>
                   <div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Monthly Average"
-                        onChange={(event) => {
-                          setMonthlyAverage(event.target.value);
-                        }}
-                      />
+                    <div className={styles.quizInputContainer}>
+                      <div className={styles.row}>
+                        <span className={styles.span}>$</span>
+                        <input
+                          className={styles.text}
+                          type="text"
+                          placeholder="Monthly Average"
+                          onChange={(event) => {
+                            setMonthlyAverage(event.target.value);
+                          }}
+                        />
+                      </div>
 
                       <input
+                        className={styles.input}
                         type="text"
                         name=""
                         id=""
@@ -95,13 +101,14 @@ export default function Calculator(props) {
                     </div>
 
                     <button
+                      className={styles.button}
                       onClick={() => {
                         Promise.all([
                           setFirstSection(false),
                           getSystemNeeded(),
-                          getCost(),
+
                           findSavings(),
-                        ]).then(setThirdSection(true));
+                        ]).then(setThirdSection(true), getCost());
                       }}
                     >
                       Submit

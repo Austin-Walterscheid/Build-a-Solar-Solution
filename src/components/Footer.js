@@ -15,11 +15,11 @@ export default function Footer(props) {
     <div className={styles.footer}>
       <img className={styles.logo} src={photo} alt="" />
       <div className="exploreContainer">
-        <div className={styles.footerTitle}>Explore</div>
-        <div className={styles.footerTags}>Home</div>
-        <div className={styles.footerTags}>About</div>
-        <div className={styles.footerTags}>DIY kits</div>
-        <div className={styles.footerTags}>Solar Calculator</div>
+        <div  className={styles.footerTitle}>Explore</div>
+        <div onClick={() => {navigate('/')}} className={styles.footerTags}>Home</div>
+        <div onClick={() => {navigate('/about')}} className={styles.footerTags}>About</div>
+        <div onClick={() => {navigate('/diy')}} className={styles.footerTags}>DIY kits</div>
+        <div onClick={() => {navigate('/solarcalculator')}} className={styles.footerTags}>Solar Calculator</div>
       </div>
       <div className="contactUsContainer">
         <div className={styles.socialsText}>Our Socials </div>
