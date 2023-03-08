@@ -42,7 +42,7 @@ video {
 
 .button {
     background-color: transparent;
-    border: 2px white solid;
+    border: 1px white solid;
     color: white;
     margin: 15px;
     border-radius: 5px;
@@ -88,8 +88,24 @@ video {
     display: flex;
     width: 100vw;
     justify-content: space-around;
+    padding: 40px 30px 0px 0px;
+    color: white;
+}
+
+.contactHeader {
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    height: 25vh;
+}
+
+.headerContainer {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
     padding: 50px 50px 0px 0px;
     color: white;
+    position: absolute;
 }
 
 .contactHeader {

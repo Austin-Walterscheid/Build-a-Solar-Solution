@@ -9,6 +9,7 @@ import clipboard from "../media/clipboard.png";
 import truck from "../media/truck.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/Header";
+import Calculator from "../screens/Calculator";
 import Footer from "../components/Footer";
 import kitSolar from "../media/kitSolar.png";
 import { Arrow } from "../media/Arrow";
@@ -92,61 +93,9 @@ const DiyKitScreen = () => {
           </div>
         </div>
         <div className={styles.bottomContainer}>
-          <div className={styles.bottomWords}>
-            ALL DIY SOLAR KITS COME WITH LIFETIME SUPPORT, QUALITY COMPONENTS AT
-            THE BEST PRICES
-          </div>
+         <Calculator/>
         </div>
-        <div className={styles.kitsContainer}>
-          KITS
-          <div className={styles.kitPackages}>
-            <div
-              onClick={() => {
-                navigate("/kit/4");
-              }}
-              className={styles.pack}
-            >
-              <img src={kitSolar} className={styles.solarIcon} />
-              <p>10 panels</p>
-              <p>4 Kw System</p>
-
-              <button className={styles.button}>View</button>
-            </div>
-            <div
-              onClick={() => {
-                navigate("/kit/8");
-              }}
-              className={styles.pack}
-            >
-              <img src={kitSolar} className={styles.solarIcon} />
-              <p>20 panels</p>
-              <p>8 KW System</p>
-              <button className={styles.button}>View</button>
-            </div>
-            <div
-              onClick={() => {
-                navigate("/kit/12");
-              }}
-              className={styles.pack}
-            >
-              <img src={kitSolar} className={styles.solarIcon} />
-              <p>30 panels</p>
-              <p>12 KW System</p>
-              <button className={styles.button}>View</button>
-            </div>
-            <div
-              onClick={() => {
-                navigate("/kit/16");
-              }}
-              className={styles.pack}
-            >
-              <img src={kitSolar} className={styles.solarIcon} />
-              <p>40 panels</p>
-              <p>16 KW System</p>
-              <button className={styles.button}>View</button>
-            </div>
-          </div>
-        </div>
+        
         <Footer />
       </div>
     </>

@@ -3,8 +3,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .mainContainer {
@@ -16,8 +16,11 @@
 }
 
 .backgroundPhoto {
-    height: 100vh;
-    background-image: url('../media/contactphoto.jpg');
+    height: 100%;
+    background-image: url("../media/contactphoto.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .actualFaq {
@@ -29,17 +32,31 @@
 .statsContainer {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     display: flex;
+    border-radius: 15px;
+    flex-direction: column;
     background-color: #cccccc;
-    padding: 20px 100px 100px 100px;
+    width: 55%;
 }
 
 .costTitle {
+    font-size: 25px;
+    font-weight: 200;
     margin: 10px 10px 0px 0px;
+    color: black;
+}
+
+.costAnswer {
+    color: black;
+    font-weight: 200;
 }
 
 .statNumberContainer {
     display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .calcQuiz {
@@ -75,6 +92,10 @@
     border: none;
 }
 
+.overlay {
+    height: 100%;
+}
+
 .questionsParagraph {
     font-weight: 600;
 }
@@ -98,7 +119,7 @@
 
 .span {
     color: black;
-    top: 6px;
+    top: 18px;
     left: 9px;
     font-size: 20px;
     position: absolute;

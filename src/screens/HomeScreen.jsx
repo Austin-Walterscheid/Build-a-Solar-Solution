@@ -12,8 +12,8 @@ const HomeScreen = () => {
         <div className={styles.overlay}></div>
         <video src={videobg} autoPlay loop muted />
         <div className={styles.cont}>
-          <header className="contactHeader">
-            <div className="headerContainer">
+          <header className={styles.contactHeader}>
+            <div className={styles.headerContainer}>
               <div></div>
               <div
                 onClick={() => {
@@ -36,12 +36,6 @@ const HomeScreen = () => {
                 className={styles.headerPieces}
               >
                 Diy Kits
-              </div>
-              <div
-                onClick={() => navigate("/solarcalculator")}
-                className={styles.headerPieces}
-              >
-                Solar Calculator
               </div>
               <div
                 onClick={() => navigate("/login")}
