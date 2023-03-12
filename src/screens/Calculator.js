@@ -11,6 +11,7 @@ export default function Calculator(props) {
   const [secondSection, setSecondSection] = useState(false);
   const [thirdSection, setThirdSection] = useState(false);
   const [kwPrice, setkwPrice] = useState(false);
+  const [totalKwUsed, setTotalKwUsed] = useState();
   const [monthlyAverage, setMonthlyAverage] = useState(0);
   const [cost, setCost] = useState(0);
   const [installCost, setInstallCost] = useState(0);
@@ -21,6 +22,7 @@ export default function Calculator(props) {
 
   const getSystemNeeded = () => {
     let number = (monthlyAverage / kwPrice) * 12;
+    setTotalKwUsed(number);
     let largeRounded = number / 1000;
     let rounded = largeRounded.toFixed(1);
     setSystemSize(rounded);
@@ -39,12 +41,7 @@ export default function Calculator(props) {
     let counter = 0;
     let average = parseInt(monthlyAverage);
     for (let i = 0; i < 301; i++) {
-      if (i % 12 !== 0) {
-        counter = counter + average;
-      } else {
-        average = average + average * 0.004;
-        counter = counter + average;
-      }
+      counter = counter + average
     }
     let savings = counter - cost;
     let realSavings = savings.toFixed(2);
@@ -54,7 +51,9 @@ export default function Calculator(props) {
   useEffect(() => {
     getCost();
   }, [systemSize]);
-
+  useEffect(() => {
+    localStorage.setItem(`totalUsage`, `${totalKwUsed}`);
+  }, [totalKwUsed]);
   return (
     <div className={styles.overlay}>
       <div className={styles.backgroundPhoto}>
@@ -143,7 +142,7 @@ export default function Calculator(props) {
 
                   <div classname={styles.buttonContainer}>
                     <button
-                    className={styles.button}
+                      className={styles.button}
                       onClick={() => {
                         Promise.all([setFirstSection(true)]).then(
                           setThirdSection(false)
@@ -153,9 +152,9 @@ export default function Calculator(props) {
                       back baby
                     </button>
                     <button
-                    className={styles.button}
+                      className={styles.button}
                       onClick={() => {
-                        navigate(`/${systemSize}`);
+                        navigate(`/kit/${systemSize}`);
                       }}
                     >
                       See Package

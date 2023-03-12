@@ -73,7 +73,7 @@ const DiyKitScreen = () => {
                 <div className={styles.wordsWicon}>
                   <img src={clipboard} alt="" className={styles.icon1} />
                   <h5>Plan Set</h5>
-                  <p>The paperwork and plans you need</p>
+                    <p>The paperwork and plans you need</p>
                 </div>
                 <div className={styles.wordsWicon}>
                   <img src={truck} alt="" className={styles.icon1} />
