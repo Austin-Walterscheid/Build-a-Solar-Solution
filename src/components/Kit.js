@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./Kit.module.css";
-import { useLocation, useParams } from "react-router-dom";
+import { Navigate, useLocation, useParams } from "react-router-dom";
 import joe from "../media/joe.png";
 import solar from "../media/solarrrr.png";
 import wrench from "../media/wrench.png";
@@ -15,8 +15,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import kitSolar from "../media/kitSolar.png";
 import { flushSync } from "react-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Kit() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [panelNumber, setPanelNumber] = useState();
 
@@ -240,6 +242,7 @@ export function Kit() {
                           onClick={() => {
                             setCustomize(false);
                             setReceipt(true);
+                            Navigate("/checkout");
                           }}
                         >
                           Create Kit
@@ -251,9 +254,7 @@ export function Kit() {
                       {receipt ? (
                         <div className={styles.somethingContainerThird}>
                           <div className={styles.receiptOther}>
-                            <div className={styles.title}>
-                              System overview
-                            </div>
+                            <div className={styles.title}>System overview</div>
                             <div className={styles.receiptTitle}>
                               All included
                             </div>
@@ -329,12 +330,10 @@ export function Kit() {
                             <button
                               className={styles.button}
                               onClick={() => {
-                                setInverter(false);
-                                setCustomize(false);
-                                setReceipt(false);
+                                navigate(`/checkout/${id}`);
                               }}
                             >
-                              Create Kit
+                              Next
                             </button>
 
                             <button
@@ -346,14 +345,6 @@ export function Kit() {
                               Customize More
                             </button>
                           </div>
-                          <a
-                            target={"_blank"}
-                            href="https://www.google.com/search?q=solar+installers+near+me&rlz=1C5CHFA_enUS909US909&oq=solar+installers+near+me&aqs=chrome.0.69i59j0i402j0i512l2j0i22i30l6.13854j0j7&sourceid=chrome&ie=UTF-8"
-                          >
-                            <button>
-                              Find an electrition to install solar!{" "}
-                            </button>
-                          </a>
                         </div>
                       ) : (
                         <></>
