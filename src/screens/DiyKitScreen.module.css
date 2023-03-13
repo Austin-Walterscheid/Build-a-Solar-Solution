@@ -24,7 +24,6 @@
 .split {
     display: flex;
     flex-direction: column;
-    height: 80%;
 }
 
 .arrowContainer {
@@ -42,7 +41,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 50%;
     align-items: center;
 }
 
@@ -51,8 +49,8 @@
     width: 100%;
     background-color: white;
     justify-content: center;
-    height: 100%;
     align-items: center;
+    height: 500px;
 }
 
 .video2 {
@@ -63,8 +61,8 @@
 }
 
 .icon1 {
-    width: 80px;
-    height: 80px;
+    width: 40%;
+    height: 40%;
 }
 
 .bottomIcons {
@@ -78,7 +76,6 @@
 .iconsCont2 {
     display: flex;
     flex-direction: column;
-    width: 50%;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -95,12 +92,10 @@
 }
 
 .backgroundPhoto {
-    height: 100%;
+    height: 100vh;
     background-image: url("../media/joe.png");
-    object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 100%;
     background-position: center;
 }
 
@@ -109,7 +104,6 @@
     flex-direction: column;
     align-items: center;
     color: black;
-    margin: 10px 50px;
 }
 
 .bottomContainer {
@@ -181,3 +175,42 @@ p {
     justify-content: space-around;
     width: 80%;
 }
+
+@media (width < 960px) {
+    .topContainer {
+        width: 80%;
+        justify-content: center;
+    }
+    .headerContainer {
+        width: 70%;
+    }
+}
+
+.king {
+    height: 100%;
+    width: 100%;
+}
+
+@media (width < 960px) {
+    .topContainer {
+        width: 80%;
+        justify-content: center;
+    }
+    .headerContainer {
+        width: 70%;
+    }
+}
+
+@media (width < 850px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media (width < 720px) {
+    .solarTitle {
+        font-size: 50px;
+    }
+}
+
+@media (width < 600px) {}

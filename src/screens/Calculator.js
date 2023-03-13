@@ -82,7 +82,7 @@ export default function Calculator(props) {
                       <div className={styles.row}>
                         <span className={styles.span}>$</span>
                         <input
-                          className={styles.text}
+                          className={styles.input}
                           type="text"
                           placeholder="Monthly Average"
                           onChange={(event) => {

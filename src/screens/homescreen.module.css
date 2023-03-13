@@ -20,10 +20,17 @@ video {
     width: 100%;
 }
 
+.center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .cont {
     position: absolute;
     width: 100%;
     top: 0;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +72,7 @@ video {
 
 .loginContainer {
     display: flex;
-    height: 50%;
+    height: 60%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -116,8 +123,39 @@ video {
     height: 13vh;
 }
 
+.pic {
+    background-image: url('/src/media/background.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
 .headerPieces {
     margin: 10px;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media (width < 1300px) {
+    video {
+        display: none;
+    }
+}
+
+@media (width < 800px) {
+    .headerContainer {
+        width: 50%;
+    }
+}
+
+@media (width < 610px) {
+    .title {
+        font-size: 45px;
+    }
+    .p {
+        font-size: 30px;
+    }
+    .headerContainer {
+        width: 70%;
+    }
 }

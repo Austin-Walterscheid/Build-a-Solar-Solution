@@ -9,7 +9,7 @@
 
 .backgroundPhoto {
     height: 100%;
-    background-image: url('../media/contactphoto.jpg');
+    background-image: url("../media/contactphoto.jpg");
 }
 
 .mainText {
@@ -68,4 +68,18 @@
 .aboutParagraph {
     font-weight: 200;
     font-size: 25px;
+}
+
+@media (width < 700px) {
+    .mainText {
+        color: white;
+        font-size: 63px;
+        font-weight: 200;
+    }
+    .aboutParagraph {
+        font-size: 16px;
+    }
+    .aboutContainer {
+        width: 75%
+    }
 }

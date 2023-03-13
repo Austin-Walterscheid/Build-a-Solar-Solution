@@ -12,6 +12,21 @@
     font-size: 25px;
 }
 
+.column {
+    display: flex;
+}
+
+.halfContainer {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.svgContainer {
+    height: 50px;
+    width: 50px;
+}
+
 .logo {
     height: 150px;
 }

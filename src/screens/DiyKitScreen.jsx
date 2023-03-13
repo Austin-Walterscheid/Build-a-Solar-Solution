@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 const DiyKitScreen = () => {
   const navigate = useNavigate();
   return (
-    <>
+    <div className={styles.king}>
       <div className={styles.main}>
         <div className={styles.backgroundPhoto}>
           <div className={styles.overlay}>
@@ -36,13 +36,15 @@ const DiyKitScreen = () => {
               </div>
             </div>
             <div className={styles.arrowContainer}>
-              <Arrow />
+              <a href="#next">
+                <Arrow />
+              </a>
             </div>
           </div>
         </div>
 
         <div className={styles.split}>
-          <div className={styles.iconTitle}>
+          <div id="next" className={styles.iconTitle}>
             DIY kits with everything included!
           </div>
           <div className={styles.row}>
@@ -73,7 +75,7 @@ const DiyKitScreen = () => {
                 <div className={styles.wordsWicon}>
                   <img src={clipboard} alt="" className={styles.icon1} />
                   <h5>Plan Set</h5>
-                    <p>The paperwork and plans you need</p>
+                  <p>The paperwork and plans you need</p>
                 </div>
                 <div className={styles.wordsWicon}>
                   <img src={truck} alt="" className={styles.icon1} />
@@ -93,12 +95,12 @@ const DiyKitScreen = () => {
           </div>
         </div>
         <div className={styles.bottomContainer}>
-         <Calculator/>
+          <Calculator />
         </div>
-        
+
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

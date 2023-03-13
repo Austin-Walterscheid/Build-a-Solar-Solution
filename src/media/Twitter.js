@@ -3,7 +3,7 @@ import React from "react";
 export const Twitter = ({ width = 100, height = 100 }) => {
   return (
     <svg
-      height="100"
+      height="inherit"
       style={{
         margin:'15px',
         background:'white',
@@ -14,7 +14,7 @@ export const Twitter = ({ width = 100, height = 100 }) => {
       }}
       version="1.1"
       viewBox="0 0 512 512"
-      width="100"
+      width="inherit"
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsSerif="http://www.serif.com/"
