@@ -205,7 +205,7 @@
 }
 
 .somethingContainer {
-    width: 50vw;
+    width: 40vw;
     display: flex;
     justify-content: space-around;
 }
@@ -378,4 +378,25 @@ p {
     margin: 25px;
     justify-content: space-around;
     width: 80%;
+}
+
+@media (width < 700px) {
+    .choice {
+        font-size: 14px;
+    }
+    .iconsCont2 {
+        width: 85%;
+    }
+    .somethingContainerColumn {
+        width: 81vw;
+    }
+    .panelP {
+        font-size: 15px;
+    }
+    .somethingContainerThird {
+        width: 90vw;
+    }
+    .somethingContainer {
+        width: 65vw;
+    }
 }

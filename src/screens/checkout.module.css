@@ -447,3 +447,12 @@ p {
     justify-content: space-around;
     width: 80%;
 }
+
+@media (width < 800px) {
+    .checkoutContainer {
+        width: 75%;
+    }
+    .cashTitle {
+        font-size: 30px;
+    }
+}
