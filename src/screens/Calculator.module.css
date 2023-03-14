@@ -248,6 +248,21 @@ input {
     width: 100%;
 }
 
+@media (width < 900px) {
+    .quizInputContainer {
+        justify-content: space-evenly;
+    }
+    .span {
+        left: 1px;
+    }
+}
+
+@media (width < 800px) {
+    .span {
+        left: -7px;
+    }
+}
+
 @media (width < 600px) {
     .calcQuiz {
         width: 100%;
@@ -268,5 +283,12 @@ input {
     }
     .calcParagraph {
         width: 70%;
+    }
+    .span {
+        left: -10px;
+        top: 7px;
+    }
+    .input {
+        font-size: small;
     }
 }
