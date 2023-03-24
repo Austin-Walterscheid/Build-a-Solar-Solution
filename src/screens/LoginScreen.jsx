@@ -6,6 +6,7 @@ import { auth } from '../firebase';
 import Header from '../components/Header';
 
 
+
 const LoginScreen = () => {
 
     const [registerEmail, setRegisterEmail] = useState("");
@@ -44,23 +45,26 @@ const LoginScreen = () => {
         <div className={styles.secondContainer}>
             <div className={styles.mainContainer}>
                 <Header />
-                <div>
+                <div className={styles.topContainer}>
 
-                    <h1>Register</h1>
-                    <input placeholder='Email...' onChange={(event) => { setRegisterEmail(event.target.value) }} />
-                    <input placeholder="Password..." onChange={(event) => { setRegisterPassword(event.target.value) }} />
-                    <button onClick={register}>Create User</button>
                 </div>
-                <div>
+                <div className={styles.bottomContainer}>
                     <h1> Login </h1>
                     <input placeholder='Email...' onChange={(event) => { setLoginEmail(event.target.value) }} />
                     <input placeholder='Password...' onChange={(event) => { setLoginPassword(event.target.value) }} />
-                    <button onClick={() => {login(); navigate("/")}} route>Login</button>
                 </div>
-                <h4>User Logged In: </h4>
-                {user?.email}
+                    <button onClick={() => {login(); navigate("/")}} route>Login</button>
+                <h4> {user?.email} is signed in</h4>
+                {/* {user?.email} */}
 
                 <button onClick={logout}>Sign out</button>
+            <div className={styles.registerHere}>
+                <h4>Don't have an account?</h4>
+    <h1>Register</h1>
+    <input placeholder='Email...' onChange={(event) => { setRegisterEmail(event.target.value) }} />
+    <input placeholder="Password..." onChange={(event) => { setRegisterPassword(event.target.value) }} />
+<button onClick={register}>Sign Up</button>
+            </div>
             </div>
         </div>
     )

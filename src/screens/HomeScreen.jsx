@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { auth } from '../firebase'
-import { getUser } from "../server/util/controller";
+import { getUser } from "../server/controller";
 
 
 

@@ -4,9 +4,31 @@
     flex-direction: column;
     align-items: center;
     color: white;
+    border: 2px;
+    border-color: white;
 }
 .secondContainer {
     background-color: black;
     height: 100vh;
     
+}
+.bottomContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.topContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+button {
+    margin: 5px;
+    width: 70px;
+}
+.registerHere {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
