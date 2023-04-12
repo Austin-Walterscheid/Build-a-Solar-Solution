@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Calculator.module.css";
 import photo from "../media/contactphoto.jpg";
 import Header from "../components/Header";
@@ -11,6 +11,7 @@ export default function Calculator(props) {
   const [secondSection, setSecondSection] = useState(false);
   const [thirdSection, setThirdSection] = useState(false);
   const [kwPrice, setkwPrice] = useState(false);
+  const [totalKwUsed, setTotalKwUsed] = useState();
   const [monthlyAverage, setMonthlyAverage] = useState(0);
   const [cost, setCost] = useState(0);
   const [installCost, setInstallCost] = useState(0);
@@ -21,16 +22,18 @@ export default function Calculator(props) {
 
   const getSystemNeeded = () => {
     let number = (monthlyAverage / kwPrice) * 12;
+    setTotalKwUsed(number);
     let largeRounded = number / 1000;
     let rounded = largeRounded.toFixed(1);
     setSystemSize(rounded);
-
-    console.log(systemSize);
   };
   const getCost = () => {
     const cost = systemSize * 1700;
+
     setCost(cost);
+
     let formattedCost = cost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
     setInstallCost(formattedCost);
   };
 
@@ -38,22 +41,23 @@ export default function Calculator(props) {
     let counter = 0;
     let average = parseInt(monthlyAverage);
     for (let i = 0; i < 301; i++) {
-      if (i % 12 !== 0) {
-        counter = counter + average;
-      } else {
-        average = average + average * 0.04;
-        counter = counter + average;
-      }
+      counter = counter + average
     }
     let savings = counter - cost;
     let realSavings = savings.toFixed(2);
     setSavings(realSavings.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
   };
 
+  useEffect(() => {
+    getCost();
+  }, [systemSize]);
+  useEffect(() => {
+    localStorage.setItem(`totalUsage`, `${totalKwUsed}`);
+  }, [totalKwUsed]);
   return (
     <div className={styles.overlay}>
       <div className={styles.backgroundPhoto}>
-        <Header/>
+        {/* <Header /> */}
         <div className={styles.main}>
           <div className={styles.calcTitleContainer}>
             <div className={styles.calcTitle}>Solar Panel Cost Calculator</div>
@@ -74,32 +78,40 @@ export default function Calculator(props) {
                     How much do you pay a month on average for electricity?
                   </div>
                   <div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Monthly Average"
-                        onChange={(event) => {
-                          setMonthlyAverage(event.target.value);
-                        }}
-                      />
-
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="kwh price"
-                        onChange={(event) => {
-                          setkwPrice(event.target.value);
-                        }}
-                      />
+                    <div className={styles.quizInputContainer}>
+                      <div className={styles.row}>
+                        <span className={styles.span}>$</span>
+                        <input
+                          className={styles.input}
+                          type="text"
+                          placeholder="Monthly Average"
+                          onChange={(event) => {
+                            setMonthlyAverage(event.target.value);
+                          }}
+                        />
+                      </div>
+                      <div className={styles.row}>
+                        <span className={styles.span}>¢</span>
+                        <input
+                          className={styles.input}
+                          type="text"
+                          name=""
+                          id=""
+                          placeholder="kwh price"
+                          onChange={(event) => {
+                            setkwPrice(event.target.value);
+                          }}
+                        />
+                      </div>
                     </div>
 
                     <button
+                      className={styles.button}
                       onClick={() => {
                         Promise.all([
                           setFirstSection(false),
                           getSystemNeeded(),
-                          getCost(),
+
                           findSavings(),
                         ]).then(setThirdSection(true));
                       }}
@@ -116,19 +128,21 @@ export default function Calculator(props) {
                   <div className={styles.statNumberContainer}>
                     <div>
                       <div className={styles.costTitle}>Install Cost</div>
-                      <div>{installCost}</div>
+                      <div className={styles.costAnswer}>{installCost}</div>
                     </div>
                     <div>
                       <div className={styles.costTitle}>System Size</div>
-                      <div>{systemSize}</div>
+                      <div className={styles.costAnswer}>{systemSize}</div>
                     </div>
                     <div>
                       <div className={styles.costTitle}>25 Year Savings</div>
-                      <div>{savings}</div>
+                      <div className={styles.costAnswer}>{savings}</div>
                     </div>
                   </div>
-                  <div>
+
+                  <div classname={styles.buttonContainer}>
                     <button
+                      className={styles.button}
                       onClick={() => {
                         Promise.all([setFirstSection(true)]).then(
                           setThirdSection(false)
@@ -136,6 +150,14 @@ export default function Calculator(props) {
                       }}
                     >
                       back baby
+                    </button>
+                    <button
+                      className={styles.button}
+                      onClick={() => {
+                        navigate(`/kit/${systemSize}`);
+                      }}
+                    >
+                      See Package
                     </button>
                   </div>
                 </div>
@@ -145,7 +167,7 @@ export default function Calculator(props) {
         </div>
       </div>
 
-      <div className={styles.solarFAQ}>
+      {/* <div className={styles.solarFAQ}>
         <div>
           <div className={styles.questionsTitle}>
             Frequently Asked Questions on DIY solar
@@ -197,8 +219,7 @@ export default function Calculator(props) {
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
+      </div> */}
     </div>
   );
 }

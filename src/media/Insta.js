@@ -1,6 +1,8 @@
-import React from "react";
+import {React, useEffect} from "react";
 
-export const Insta = () => {
+export const Insta = (props) => {
+
+
   return (
     <svg
       
@@ -16,7 +18,8 @@ export const Insta = () => {
       }}
       version="1.1"
       viewBox="0 0 512 512"
-      width='100'
+      width='inherit'
+      height='inherit'
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsSerif="http://www.serif.com/"

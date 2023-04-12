@@ -26,12 +26,12 @@ const HomeScreen = () => {
 
   return (
     <div>
-      <div className={styles.main}>
+      <div className={`${styles.main} ${styles.pic}` }>
         <div className={styles.overlay}></div>
         <video src={videobg} autoPlay loop muted />
         <div className={styles.cont}>
-          <header className="contactHeader">
-            <div className="headerContainer">
+          <header className={styles.contactHeader}>
+            <div className={styles.headerContainer}>
               <div></div>
               <div
                 onClick={() => {
@@ -56,12 +56,6 @@ const HomeScreen = () => {
                 Diy Kits
               </div>
               <div
-                onClick={() => navigate("/solarcalculator")}
-                className={styles.headerPieces}
-              >
-                Solar Calculator
-              </div>
-              <div
                 onClick={() => navigate("/login")}
                 className={styles.headerPieces}
               >
@@ -69,17 +63,19 @@ const HomeScreen = () => {
               </div>
             </div>
           </header>
-          <div className={styles.loginContainer}>
-            <div className={styles.title}>Lets make this easy</div>
-            <div className={styles.p}>Solar without the salesman!</div>
-            <button
-              className={styles.button}
-              onClick={() => {
-                navigate("/diy");
-              }}
-            >
-              Do it Yourself
-            </button>
+          <div className={styles.center}>
+            <div className={styles.loginContainer}>
+              <div className={styles.title}>Lets make this easy</div>
+              <div className={styles.p}>Solar without the salesman!</div>
+              <button
+                className={styles.button}
+                onClick={() => {
+                  navigate("/diy");
+                }}
+              >
+                Do it Yourself
+              </button>
+            </div>
           </div>
         </div>
       </div>

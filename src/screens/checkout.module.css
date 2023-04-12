@@ -3,6 +3,9 @@
     position: absolute;
     background-color: black;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .topContainer {
@@ -63,6 +66,20 @@
     text-align: center;
 }
 
+.centerScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+
+.inputCheckout {
+    margin: 10px;
+    text-align: center;
+}
+
 .imageBackwards {
     display: flex;
     flex-direction: row-reverse;
@@ -80,6 +97,29 @@
 .title {
     font-weight: 400;
     font-size: 40px;
+}
+
+.large {
+    font-size: 20px;
+    font-weight: 250;
+}
+
+.column {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: .5px white solid;
+    padding: 30px;
+    margin: 30px;
+    width: 40%;
+}
+
+.cashTitle {
+    font-weight: 300;
+    width: 70%;
+    font-size: 35px;
 }
 
 .labelContainer {
@@ -200,12 +240,12 @@
 
 .kwTitle {
     font-weight: 300;
-    font-size: 45px;
+    font-size: 50px;
     margin: 15px;
 }
 
 .somethingContainer {
-    width: 40vw;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
 }
@@ -372,6 +412,34 @@ p {
     justify-content: center;
 }
 
+.checkoutContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    align-items: center;
+    margin: 40px;
+}
+
+.line {
+    width: 1px;
+    height: 200px;
+    background-color: white;
+}
+
+.checkoutItem {
+    font-size: 40px;
+    font-weight: 225;
+    transition-delay: 100ms;
+    display: flex;
+    padding: 10px;
+}
+
+.checkoutItem:hover {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+}
+
 .kitPackages {
     display: flex;
     flex-direction: row;
@@ -380,23 +448,11 @@ p {
     width: 80%;
 }
 
-@media (width < 700px) {
-    .choice {
-        font-size: 14px;
+@media (width < 800px) {
+    .checkoutContainer {
+        width: 75%;
     }
-    .iconsCont2 {
-        width: 85%;
-    }
-    .somethingContainerColumn {
-        width: 81vw;
-    }
-    .panelP {
-        font-size: 15px;
-    }
-    .somethingContainerThird {
-        width: 90vw;
-    }
-    .somethingContainer {
-        width: 65vw;
+    .cashTitle {
+        font-size: 30px;
     }
 }
