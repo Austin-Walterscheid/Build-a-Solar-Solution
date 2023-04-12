@@ -73,7 +73,7 @@ const HomeScreen = () => {
                   navigate("/diy");
                 }}
               >
-                Do it Yourself
+                Start
               </button>
             </div>
           </div>
